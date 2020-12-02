@@ -1,24 +1,29 @@
 Genomic pan-cancer classification using image-based deep learning
 =====
-### Reproduce the results of classification experiments
-'''
+
+Reproduce the results of classification experiments
+------
+
+```Python
 cd DNN-models
 downloads h5 folder
 python 5_load_model.py
-'''
-> The h5 folder of the pre-trained four models see: https://drive.google.com/drive/folders/1Mj0x1Tyhp6jEWVTh2L9vOHtgBnox_T2E?usp=sharing
+```
+***The h5 folder of the pre-trained four models see: https://drive.google.com/drive/folders/1Mj0x1Tyhp6jEWVTh2L9vOHtgBnox_T2E?usp=sharing***
 
-### Code Details
+Code Details
+------
+
 #### Generate-all-mutation-map
 including original dataset and the code of genetic mutation map construction
 
-'''
+```Python
 cd Generate-all-mutation-map
 python 0_statistic_cancer_geneNums.py
 python 1_statistic_variant_gene.py
 python 2_statistic_same_gene_chrom_noselect.py
 python 3_data_preprocess_noselect_white.py
-'''
+```
 
 1. 0_statistic_cancer_geneNums.py: Statistics the number of genes and save the gene name of each cancer to the directory "/geneNameCancer/" 
 2. 1_statistic_variant_gene.py: Statistics the gene name list of each chromosome for each cancer separately 
@@ -36,7 +41,7 @@ python 3_data_preprocess_noselect_white.py
 #### DNN-models
 including the code of deep neural networks and Guided Grad-CAM visualization
 
-'''
+```Python
 Split the dataset ("dataset/" path generated above) into training set, validation set and testing set manually according to the appropriate ratio (eg. 8:1:1)
 
 cd DNN-models
@@ -48,7 +53,7 @@ copy .h5 file into ../h5 folder.
 python 5_load_model.py
 python 6_draw_heatmap_guidedGradCAM.py
 python 7_generate_and_statistics_heatmapt.py
-'''
+```
 
 1. 4_train_model.py: Use the testing set to evaluate the model and save the h5 file, calculate the F1 value
     Decide what model to use by modifying the variable base_model="?"
