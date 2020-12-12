@@ -11,6 +11,15 @@ python 5_load_model.py
 ```
 ***The h5 folder of the pre-trained four models see: https://drive.google.com/drive/folders/1Mj0x1Tyhp6jEWVTh2L9vOHtgBnox_T2E?usp=sharing***
 
+Retraining the models of classification
+------
+
+```Python
+cd DNN-models
+# The default model used is Inception-ResNet-v2, change the adopted model by modifying the variable base_model="?"
+python 4_train_model.py 
+```
+
 Code Details
 ------
 
