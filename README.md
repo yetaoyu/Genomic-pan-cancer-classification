@@ -1,6 +1,15 @@
 Genomic pan-cancer classification using image-based deep learning
 =====
 
+Setup
+------
+To run this code you need the following:
+- a machine with multiple GPUs (CUDA 9.0)
+```
+conda create -n tensorflow python=3.6
+pip install tensorflow-gpu==1.12.0 numpy==1.16.4 keras==2.2.5 opencv-python scikit-learn matplotlib
+```
+
 Reproduce the results of classification experiments
 ------
 
