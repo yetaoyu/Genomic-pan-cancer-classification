@@ -64,8 +64,8 @@ python 3_data_preprocess_noselect_white.py
 # Split the dataset ("dataset/" path generated above) into training set, validation set and testing set manually according to the appropriate ratio (eg. 8:1:1)
 
 cd DNN-models
-cp -r ./Generate-all-mutation-map/ChromosomeGene/ ./DNN-models
-cp -r ./Generate-all-mutation-map/geneNameCancer/ ./DNN-models
+cp -r ../Generate-all-mutation-map/ChromosomeGene/ .
+cp -r ../Generate-all-mutation-map/geneNameCancer/ .
 python 4_train_model.py
 
 # copy .h5 file into '../h5' folder.
