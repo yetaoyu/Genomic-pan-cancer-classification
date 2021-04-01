@@ -88,3 +88,5 @@ python 7_generate_and_statistics_heatmapt.py
 
 
 
+##### Dataset preprocessing:
+	Considering that the pixels (genes) in the sample map directly generated from the mutation genes are still extremely sparse, it is difficult to form meaningful maps and is not conducive to the training of deep learning models. Therefore, we finally superimposed all genes to form a complete mutation map for each cancer type by progressively stacking genes from each patient sample into the map. The genes of other patients which have been converted into the map in the previous stages will not be reset in the current stage. Experimental results show that the proposed progressively stacking method can achieve better results.
